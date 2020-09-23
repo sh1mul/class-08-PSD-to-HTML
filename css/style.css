@@ -261,29 +261,36 @@ position: relative;
 
 /* padding: 10px; */
 }
-.gallery-section .col .item:hover{
 
-}
 .item img{
 
 display: block;
 
 max-width: 100%;
 }
-.overlay{
+.gallery-section .overlay{
 
 position: absolute;
 
 width: 100%;
-
 height: 100%;
 
 top: 0;
 
 background: #15a4fa;
-
-opacity: 0.9;
+opacity: 0;
+transition-duration: 0.3s;
 }
+
+.item ul{
+	visibility: hidden;
+	opacity: 0;
+}
+.gallery-section .col:hover .item .overlay{
+	opacity: 0.9;
+
+}
+
 .item ul li{
 
 float: left;
@@ -445,7 +452,21 @@ h2 {
 }
 .contact-section .overlay{
 
-background: rgb(45 57 80 / .9);
+/* background: rgb(45 57 80 / .9); */
+
+position: absolute;
+
+width: 100%;
+
+height: 100%;
+
+top: 0;
+
+background: #2d3950;
+
+opacity: .9;
+
+transition-duration: 0.3s;
 }
 .submit input[type="checkbox"], label{
 	width: 20px;
@@ -456,12 +477,6 @@ background: rgb(45 57 80 / .9);
 
 .contact-section .flex {
     justify-content: center;
-}
-.contact-form form{
-
-}
-.contact-form form .flex{
-
 }
 .contact-form form ul{
 
